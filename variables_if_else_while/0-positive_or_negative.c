@@ -13,11 +13,11 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	if (n < 0)
 	{
-		printf("%d,in ngativ"\n, n);
+		printf("%d,in ngative"\n, n);
 	}
 	else if (n > 0)
 	{
-		printf("%d,is positf" / n, n);
+		printf("%d,is positve" / n, n);
 	}
 	else
 	{
