@@ -13,7 +13,7 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	if (n < 0)
 	{
-		printf("%d,in ngative"\n, n);
+		printf("%d,is ngative"\n, n);
 	}
 	else if (n > 0)
 	{
