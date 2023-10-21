@@ -2,7 +2,6 @@
 #include "main.h"
 /**
  * print_most_numbers - Check description
-
  * Return: 0
  */
 void print_most_numbers(void)
