@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 /**
 *_puts- prints a string, followed by a new line
 *@str: char
@@ -7,7 +6,7 @@
 */
 void _puts(char *str)
 {
-while(*str != '\0')
+while (*str != '\0')
 {
 putchar(*str);
 str++;
