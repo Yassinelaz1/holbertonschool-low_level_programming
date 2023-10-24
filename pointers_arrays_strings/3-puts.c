@@ -2,14 +2,15 @@
 #include <string.h>
 /**
 *_puts- prints a string, followed by a new line
-*Return: str
+*@str: char
+*Return: 0
 */
 void _puts(char *str)
 {
-    while(*str != '\0')
-    {
-        putchar(*str);
-        str++;
-    }
-    putchar('\n');
+while(*str != '\0')
+{
+putchar(*str);
+str++;
+}
+putchar('\n');
 }
