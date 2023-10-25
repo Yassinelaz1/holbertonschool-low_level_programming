@@ -1,20 +1,20 @@
 #include "main.h"
 /**
  *rev_string - prints a string, in reverse, followed by a new line.
+ *description
  *@s: char
- *Return: 0
+ *Return: none
  */
 void rev_string(char *s)
 {
 	int l, i;
-	char swap;
+	char swap[50];
 
-	for (l = 0; s[l] != '\0'; ++l)
-		;
-	for (i = 0; i < l / 2; i++)
+	l = strlen(s);
+	for (i = 0; i < l; i++)
 	{
-		swap = s[i];
-		s[i] = s[l - 1 - i];
-		s[l - 1 - i] = swap;
+		swap[i] = *(s + l - i - 1);
 	}
+	for (i = 0; i < l; i++)
+		s[i] = swap[i];
 }
