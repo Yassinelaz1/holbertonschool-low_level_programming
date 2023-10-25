@@ -7,10 +7,15 @@
  */
 void print_rev(char *s)
 {
-len = strlen(s) 
-for (i = len - 1; i >= 0; i--)
-{
-printf(s[i]);
-} 
-printf('/n');
+	int i = 0;
+
+		while (s[i] != '\0')
+	{
+		i++;
+	}
+	while (i--)
+	{
+		_putchar(i);
+	}
+	printf('/n');
 }
