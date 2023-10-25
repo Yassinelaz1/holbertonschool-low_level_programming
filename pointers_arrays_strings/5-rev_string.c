@@ -4,18 +4,17 @@
  *@s: char
  *Return: 0
  */
- void rev_string(char *s)
+void rev_string(char *s)
 {
-	int i = 0;
+	int l, i;
+	char swap;
 
-	while (s[i] != '\0')
-    {
-		_putchar(s[i]);
-        i++;
-    }
-	while (i--)
+	for (l = 0; s[l] != '\0'; ++l)
+		;
+	for (i = 0; i < l / 2; i++)
 	{
-		_putchar(s[i]);
+		swap = s[i];
+		s[i] = s[l - 1 - i];
+		s[l - 1 - i] = swap;
 	}
-	_putchar('\n');
 }
