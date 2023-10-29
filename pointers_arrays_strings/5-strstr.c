@@ -1,19 +1,18 @@
+#include "main.h"
 #include <stdlib.h>
-#include "holberton.h"
 /**
 * _strstr - locates a substring
 * @haystack: the longer string to search
 * @needle: the substring to search for
 * Return: 0
 */
-
 char *_strstr(char *haystack, char *needle)
 {
 	int i;
-	int s = 0;
+	int n = 0;
 
-	while (needle[s] != '\0')
-		s++;
+	while (needle[n] != '\0')
+		n++;
 
 	while (*haystack)
 	{
@@ -22,7 +21,7 @@ char *_strstr(char *haystack, char *needle)
 			if (haystack[i] != needle[i])
 				break;
 		}
-		if (i != s)
+		if (i != n)
 			haystack++;
 		else
 			return (haystack);
