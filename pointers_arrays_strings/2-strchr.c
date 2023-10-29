@@ -9,7 +9,7 @@ char *_strchr(char *s, char c)
 {
 	int len, i = 0;
 
-	len= strlen(s);
+	len = strlen(s);
 	while (i < len + 1)
 	{
 		if (s[i] == c)
