@@ -1,23 +1,28 @@
 #include "main.h"
 /**
- * _strncpy - gets the length of a prefix substring.
- * @src : char
- * @dest : char
- * @n : integer
- * Return: dest.
+ * _strspn - gets the length of a prefix substring
+ * @s: segment to return bytes from
+ * @accept: the bytes to include
+ * Return: 0
  */
-
-char *_strncpy(char *dest, char *src, int n)
+unsigned int _strspn(char *s, char *accept)
 {
-	int i;
+	int i, j;
+	int c = 0;
 
-	for (i = 0; i < n && src[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		dest[i] = src[i];
+		if (s[i] != 32)
+		{
+			for (j = 0; accept[j] != '\0'; j++)
+			{
+				if (s[i] == accept[j])
+					c++;
+			}
+		}
+		else
+			return (c);
+
 	}
-	for (; i < n; i++)
-	{
-		dest[i] = '\0';
-	}
-	return (dest);
+	return (c);
 }
