@@ -20,7 +20,7 @@ int square(int x, int i)
 	return (square(x, i + 1));
 }
 /**
- * _sqrt_recursion: function that returns the natural square root of a number.
+ * _sqrt_recursion- function that returns the natural square root of a number.
  *@n:int
  *Return:0
  */
