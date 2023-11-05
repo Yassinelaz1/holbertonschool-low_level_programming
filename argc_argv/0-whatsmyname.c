@@ -1,12 +1,12 @@
-#include "main.h"
+#include <stdio.h>
 /**
- * main - check the code
- *@argc : int , number of args including name of the program
- *@argv : array of strings ;
- * Return: Always 0.
+ * main - Entry point
+ * @argc: integer
+ * @argv: char
+ * Return: void (Success)
  */
 int main(int argc, char *argv[])
 {
-	printf("%s\n", argv[argc - 1]);
+	printf("%s\n", argv[0]);
 	return (0);
 }
