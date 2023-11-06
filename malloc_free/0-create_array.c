@@ -4,17 +4,17 @@
  * @c: specific char
  * @size: size of array
  * Return: char
-*/
+ */
 char *create_array(unsigned int size, char c)
 {
-	char *array= malloc(size);
-    unsigned int i;
+	char *array = malloc(size);
+	unsigned int i;
 
-	if (array == NULL)
+	if (array == NULL || size == 0)
 		return (NULL);
-    else
-	    for (i = 0; i <= size; i++)
-		    array[i] = c;
+	else
+		for (i = 0; i <= size; i++)
+			array[i] = c;
 
 	return (array);
 }
