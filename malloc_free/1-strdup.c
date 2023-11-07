@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * *_strdup-
- * *str
- *
+ * *_strdup-returns a pointer to a newly allocated space in memory
+ * *str:char
+ *Return:char
  */
 char *_strdup(char *str)
 {
@@ -14,7 +14,7 @@ char *_strdup(char *str)
 	}
 	else
 	{
-		while (str[i] != '0')
+		while (str[i] != '\0')
 		{
 			i++;
 		}
