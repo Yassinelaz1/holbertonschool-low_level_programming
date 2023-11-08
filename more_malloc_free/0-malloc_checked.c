@@ -2,7 +2,7 @@
 /**
  * *malloc_checked-function that allocates memory using malloc
  * @b:int
- *
+ *Return: i
  */
 void *malloc_checked(unsigned int b)
 {
