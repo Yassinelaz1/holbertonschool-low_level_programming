@@ -1,10 +1,10 @@
 #include "main.h"
 /**
  * string_nconcat -  a function that concatenates two strings.
- * @s1: The first string
- * @s2: The second string
- * @n : limits of s2
- * Return: a string.
+ * @s1: string 1
+ * @s2: string 2
+ * @n : limits of string 2
+ * Return: char
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -27,12 +27,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 
 	c = malloc((n1 + n + 1) * sizeof(char));
-	if (ch == NULL)
+	if (c == NULL)
 	{
 		return (NULL);
 	}
 	for (i = 0; i < n1; i++)
-		ch[i] = s1[i];
+		c[i] = s1[i];
 	if (s2 != NULL)
 	{
 		for (j = 0; j < n; j++)
