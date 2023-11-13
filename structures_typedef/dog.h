@@ -1,5 +1,5 @@
-#ifndef __STRUCT__
-#define __STRUCT__
+#ifndef _dog_
+#define _dog_
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
