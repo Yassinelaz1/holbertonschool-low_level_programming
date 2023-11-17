@@ -1,9 +1,9 @@
 #include "function_pointers.h"
 /**
- * array_iterator-executes a function
+ * array_iterator-a function that searches for an integer.
  * @array:pointer
  * @size:int
- * @action:function
+ * @cmp:function
  * Return:void
  */
 int int_index(int *array, int size, int (*cmp)(int))
