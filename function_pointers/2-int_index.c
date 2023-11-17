@@ -1,6 +1,6 @@
 #include "function_pointers.h"
 /**
- * array_iterator-a function that searches for an integer.
+ * int_indexint_index -a function that searches for an integer.
  * @array:pointer
  * @size:int
  * @cmp:function
@@ -8,11 +8,11 @@
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
-    int i;
+	int i;
 
-    if (size > 0 && array != NULL && cmp != NULL)
-        for (i = 0; i < size; i++)
-            if ((*cmp)(array[i]) == 1)
-                return (i);
-    return (-1);
+	if (size > 0 && array != NULL && cmp != NULL)
+		for (i = 0; i < size; i++)
+			if ((*cmp)(array[i]) == 1)
+				return (i);
+	return (-1);
 }
