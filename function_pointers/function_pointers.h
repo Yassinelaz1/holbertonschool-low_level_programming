@@ -1,5 +1,6 @@
-#ifndef  _Function_pointers_
-#define  _Function_pointers_
+#ifndef Function_pointers
+#define Function_pointers
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
