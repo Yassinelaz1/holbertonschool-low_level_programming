@@ -1,54 +1,68 @@
 #include "3-calc.h"
+
 /**
- * op_add - check the code
+ * op_add - a + b
  * @a: int
  * @b: int
- * Return: null
+ * Return: int
  */
 int op_add(int a, int b)
 {
 	return (a + b);
 }
+
 /**
- * op_sub - check the code
+ * op_sub - a - b
  * @a: int
  * @b: int
- * Return: null
+ * Return: int
  */
 int op_sub(int a, int b)
 {
 	return (a - b);
 }
+
 /**
- * op_mul - check the code
- *
+ * op_mul - a * b
  * @a: int
  * @b: int
- * Return: null
+ * Return: int
  */
 int op_mul(int a, int b)
 {
 	return (a * b);
 }
+
 /**
- * op_div - check the code
- *
+ * op_div - a / b
  * @a: int
  * @b: int
- * Return: null
+ * Return: int
  */
 int op_div(int a, int b)
 {
-	return (a / b);
+	if (b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	else
+		return (a / b);
 }
+
 /**
- * op_mod - check the code
- *
+ * op_mod - a % b
  * @a: int
  * @b: int
- * Return: null
+ * Return: int
  */
 int op_mod(int a, int b)
 {
-	return (a % b);
+	if (b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	else
+		return (a % b);
 }
