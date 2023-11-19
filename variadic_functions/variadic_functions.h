@@ -2,22 +2,23 @@
 #define _VARIADIC_FUNCTIONS_
 
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include <stdarg.h>
-
-/**
- * struct print - print
- * @type: The operator
- * @f: The function associated
+/*
+ *struct types - types
+ *@types: The operator
  */
 typedef struct types
 {
-    char type;
-    void (*function)( va_list);
+	char type;
+	void (*function)(va_list);
 } types_t;
 
+int _putchar(char c);
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
-void print_all(const char * const format, ...);
+void print_all(const char *const format, ...);
+
 #endif
