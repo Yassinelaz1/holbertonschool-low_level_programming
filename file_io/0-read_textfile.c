@@ -17,13 +17,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 
 	FILE = open(filename, O_RDONLY);
-	length = read(FILE, &buffer, letters);
-	length = write(STDOUT_FILENO, &buffer, length);
+
 	if (FILE == -1)
 	{
 		return (0);
 	}
-
+	length = read(FILE, &buffer, letters);
+	length = write(STDOUT_FILENO, &buffer, length);
 	close(FILE);
 	return (length);
 }
