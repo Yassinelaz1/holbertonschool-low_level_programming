@@ -7,23 +7,23 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-    int FILE;
-    char buffer;
-    int length;
+	int FILE;
+	char buffer;
+	int length;
 
-    if (filename == NULL || !letters)
-    {
-        return (0);
-    }
+	if (filename == NULL || !letters)
+	{
+		return (0);
+	}
 
-    FILE = open(filename, O_RDONLY);
-    length = read(FILE, &buffer, letters);
-    length = write(STDOUT_FILENO, &buffer, length);
-    if (FILE == -1)
-    {
-        return (0);
-    }
+	FILE = open(filename, O_RDONLY);
+	length = read(FILE, &buffer, letters);
+	length = write(STDOUT_FILENO, &buffer, length);
+	if (FILE == -1)
+	{
+		return (0);
+	}
 
-    close(FILE);
-    return (length);
+	close(FILE);
+	return (length);
 }
