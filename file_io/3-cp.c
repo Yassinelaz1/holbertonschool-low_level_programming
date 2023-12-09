@@ -10,11 +10,13 @@ int main(int argc, char *argv[])
 	char buffer[1024];
 	int file_from, file_to;
 	int READ = 1, WRITE;
+	mode_t perm=S_IRUSR | S_IWUSR | S_IWGRP | S_IRGRP | S_IROTH
+
 
 	if (argc != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 	file_from = open(argv[1], O_RDONLY);
-	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR | S_IWGRP | S_IRGRP | S_IROTH);
+	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, );
 	if (file_from == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
