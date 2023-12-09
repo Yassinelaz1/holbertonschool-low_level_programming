@@ -7,13 +7,13 @@
  */
 int main(int argc, char *argv[])
 {
+	char buffer[1024];
 	int file_from, file_to;
+	int READ = 1, WRITE;
 	if (argc != 3)
 	{
-		dprintf("Usage: cp file_from file_to\n"), exit(97);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 	}
-
-	char c;
 
 	file_from = open(argv[1], O_RDONLY);
 	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR | S_IWGRP | S_IRGRP | S_IROTH);
@@ -28,9 +28,8 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	char buffer[1024];
-	int READ = 1, WRITE;
-	while (READ != NULL)
+
+		while (READ)
 	{
 		READ = read(file_from, buffer, 1024);
 		if (READ == -1)
@@ -55,5 +54,5 @@ int main(int argc, char *argv[])
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to), exit(100);
 	}
-	return(0)
+	return (0);
 }
