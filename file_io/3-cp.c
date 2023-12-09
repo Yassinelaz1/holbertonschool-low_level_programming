@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 	char buffer[1024];
 	int file_from, file_to;
 	int READ = 1, WRITE;
-	mode_t MODE =S_IRUSR | S_IWUSR | S_IWGRP | S_IRGRP | S_IROTH;
+	mode_t MODE = S_IRUSR | S_IWUSR | S_IWGRP | S_IRGRP | S_IROTH;
 
 	if (argc != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
