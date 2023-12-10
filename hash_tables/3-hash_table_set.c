@@ -1,6 +1,6 @@
 #include "hash_tables.h"
 /**
- * hash_table_set - add an element to the hash table
+ * hash_table_set - function that adds an element to the hash table.
  * @ht: pointer to first case of table
  * @key: key value
  * @value: value of key element
@@ -8,14 +8,14 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *ptr= NULL;
+	hash_node_t *ptr = NULL;
 	hash_node_t *node = NULL;
 	unsigned long int i;
 
 	if (!ht || !key)
-    {
-        return (0);
-    }
+	{
+		return (0);
+	}
 	i = key_index((const unsigned char *)key, ht->size);
 	ptr = ht->array[i];
 	while (ptr)
@@ -28,7 +28,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 		ptr = ptr->next;
 	}
-
 
 	node = malloc(sizeof(hash_node_t));
 
