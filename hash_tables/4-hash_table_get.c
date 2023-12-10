@@ -1,6 +1,6 @@
 #include "hash_tables.h"
 /**
- * hash_table_get - look for key in hash table
+ * hash_table_get - hat retrieves a value associated with a key.
  * @ht: pointer
  * @key: key
  * Return: char value or  NULL
@@ -17,7 +17,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 		if (p == NULL)
 			return (NULL);
 		while (strcmp(p->key, key) != 0)
-			p = ptr->next;
+			p = p->next;
 		return (p->value);
 	}
 	return (NULL);
